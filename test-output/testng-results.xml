@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="94126" started-at="2020-05-18T09:06:35 IST" finished-at="2020-05-18T09:08:09 IST">
+  <suite name="Suite" duration-ms="22815" started-at="2020-05-18T09:12:09 IST" finished-at="2020-05-18T09:12:32 IST">
     <groups>
     </groups>
-    <test name="MMT-FLight-Booking" duration-ms="94126" started-at="2020-05-18T09:06:35 IST" finished-at="2020-05-18T09:08:09 IST">
-      <class name="testcases.MMT_Automation">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.MMT_Automation@32502377]" name="initialize" is-config="true" duration-ms="11574" started-at="2020-05-18T09:06:35 IST" finished-at="2020-05-18T09:06:47 IST">
+    <test name="Company Creation" duration-ms="22815" started-at="2020-05-18T09:12:09 IST" finished-at="2020-05-18T09:12:32 IST">
+      <class name="testcases.Linarc_TaskCreate_QA2">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.Linarc_TaskCreate_QA2@31206beb]" name="initialize" is-config="true" duration-ms="11817" started-at="2020-05-18T09:12:09 IST" finished-at="2020-05-18T09:12:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="bookflight()[pri:1, instance:testcases.MMT_Automation@32502377]" name="bookflight" duration-ms="82470" started-at="2020-05-18T09:06:47 IST" finished-at="2020-05-18T09:08:09 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bookflight -->
-        <test-method status="FAIL" signature="afterTest()[pri:2, instance:testcases.MMT_Automation@32502377]" name="afterTest" duration-ms="11" started-at="2020-05-18T09:08:09 IST" finished-at="2020-05-18T09:08:09 IST">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="createTasks()[pri:0, instance:testcases.Linarc_TaskCreate_QA2@31206beb]" name="createTasks" duration-ms="10961" started-at="2020-05-18T09:12:21 IST" finished-at="2020-05-18T09:12:32 IST">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[did not expect to find [true] but found [false]]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.138)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-H5BJUJG2', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: C:\Users\Yogesh\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49311}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 619e565d23da2f51eed7abb395085f78
+*** Element info: {Using=xpath, value=//span[contains(text(),'Aquas Towers')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: did not expect to find [true] but found [false]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.failNotEquals(Assert.java:969)
-at org.testng.Assert.assertTrue(Assert.java:43)
-at org.testng.Assert.assertTrue(Assert.java:53)
-at testcases.MMT_Automation.afterTest(MMT_Automation.java:100)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.138)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-H5BJUJG2', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: C:\Users\Yogesh\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49311}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 619e565d23da2f51eed7abb395085f78
+*** Element info: {Using=xpath, value=//span[contains(text(),'Aquas Towers')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy8.click(Unknown Source)
+at testcases.Linarc_TaskCreate_QA2.createTasks(Linarc_TaskCreate_QA2.java:50)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -57,15 +82,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="finalTest()[pri:3, instance:testcases.MMT_Automation@32502377]" name="finalTest" duration-ms="3" started-at="2020-05-18T09:08:09 IST" finished-at="2020-05-18T09:08:09 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalTest -->
-      </class> <!-- testcases.MMT_Automation -->
-    </test> <!-- MMT-FLight-Booking -->
+        </test-method> <!-- createTasks -->
+      </class> <!-- testcases.Linarc_TaskCreate_QA2 -->
+    </test> <!-- Company Creation -->
   </suite> <!-- Suite -->
 </testng-results>

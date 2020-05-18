@@ -4,14 +4,14 @@
   <listeners>
     <listener class-name="basefiles.Listeners"/>
   </listeners>
-  <test thread-count="5" name="MMT-FLight-Booking(failed)">
+  <test thread-count="5" name="Company Creation(failed)">
     <classes>
-      <class name="testcases.MMT_Automation">
+      <class name="testcases.Linarc_TaskCreate_QA2">
         <methods>
+          <include name="createTasks"/>
           <include name="initialize"/>
-          <include name="afterTest"/>
         </methods>
-      </class> <!-- testcases.MMT_Automation -->
+      </class> <!-- testcases.Linarc_TaskCreate_QA2 -->
     </classes>
-  </test> <!-- MMT-FLight-Booking(failed) -->
+  </test> <!-- Company Creation(failed) -->
 </suite> <!-- Failed suite [Suite] -->

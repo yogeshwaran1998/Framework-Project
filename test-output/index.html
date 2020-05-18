@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>D:\Java Project Files\Framework_E2E_Backup\testng2.xml</span>
+                    <span>D:\Java Project Files\Framework_E2E_Backup\testng4.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,29 +102,10 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.MMT_Automation" hash-for-method="afterTest">afterTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.Linarc_TaskCreate_QA2" hash-for-method="createTasks">createTasks</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.MMT_Automation" hash-for-method="bookflight">bookflight</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testcases.MMT_Automation" hash-for-method="finalTest">finalTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -139,16 +120,37 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testcases.MMT_Automation</span>
+              <span class="class-name">testcases.Linarc_TaskCreate_QA2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="afterTest">
-                  </a> <!-- afterTest -->
-                  <span class="method-name">afterTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: did not expect to find [true] but found [false]
-	at testcases.MMT_Automation.afterTest(MMT_Automation.java:100)
+                  <a name="createTasks">
+                  </a> <!-- createTasks -->
+                  <span class="method-name">createTasks</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.138)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-H5BJUJG2&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: C:\Users\Yogesh\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49311}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 619e565d23da2f51eed7abb395085f78
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;Aquas Towers&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at testcases.Linarc_TaskCreate_QA2.createTasks(Linarc_TaskCreate_QA2.java:50)
 	at java.util.ArrayList.forEach(Unknown Source)
 ... Removed 31 stack frames
 </div> <!-- stack-trace -->
@@ -156,32 +158,10 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.MMT_Automation</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="bookflight">
-                  </a> <!-- bookflight -->
-                  <span class="method-name">bookflight</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="finalTest">
-                  </a> <!-- finalTest -->
-                  <span class="method-name">finalTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Java Project Files\Framework_E2E_Backup\testng2.xml</span>
+            <span class="header-content">D:\Java Project Files\Framework_E2E_Backup\testng4.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -191,11 +171,11 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;basefiles.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;MMT-FLight-Booking&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Company Creation&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.MMT_Automation&quot;/&gt;
+      &lt;class name=&quot;testcases.Linarc_TaskCreate_QA2&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MMT-FLight-Booking --&gt;
+  &lt;/test&gt; &lt;!-- Company Creation --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -207,7 +187,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">MMT-FLight-Booking (1 class)</span>
+                <span class="test-name">Company Creation (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,24 +213,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'bookflight')
-data.setCell(0, 2, 'testcases.MMT_Automation')
-data.setCell(0, 3, 82470);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'afterTest')
-data.setCell(1, 2, 'testcases.MMT_Automation')
-data.setCell(1, 3, 11);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'finalTest')
-data.setCell(2, 2, 'testcases.MMT_Automation')
-data.setCell(2, 3, 3);
+data.setCell(0, 1, 'createTasks')
+data.setCell(0, 2, 'testcases.Linarc_TaskCreate_QA2')
+data.setCell(0, 3, 10961);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -276,24 +248,16 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.MMT_Automation</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.Linarc_TaskCreate_QA2</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">bookflight</span>
-                <span class="method-start">11600 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">afterTest</span>
-                <span class="method-start">94082 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">finalTest</span>
-                <span class="method-start">94111 ms</span>
+                <span class="method-name">createTasks</span>
+                <span class="method-start">11836 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
