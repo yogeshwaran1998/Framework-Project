@@ -5,6 +5,12 @@
 	<groupId>E2E-Testing</groupId>
 	<artifactId>E2E</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<!-- https://maven.apache.org/general.html#encoding-warning -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.5</maven.compiler.source>
+		<maven.compiler.target>1.5</maven.compiler.target>
+	</properties>
 
 	<build>
 
@@ -27,11 +33,44 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.9.0</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
+
 
 
 		</plugins>
 
 	</build>
+	<reporting>
+		<plugins>
+			<!-- https://spotbugs.github.io/ -->
+			<!-- https://spotbugs.github.io/spotbugs-maven-plugin/usage.html -->
+			<plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>4.0.0</version>
+			</plugin>
+
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.13.0</version>
+			</plugin>
+
+		</plugins>
+	</reporting>
+
 
 
 	<dependencies>
