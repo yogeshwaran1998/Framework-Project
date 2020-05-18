@@ -4,38 +4,14 @@
   <listeners>
     <listener class-name="basefiles.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Sign-in(failed)">
+  <test thread-count="5" name="MMT-FLight-Booking(failed)">
     <classes>
-      <class name="testcases.SigninPage">
-        <methods>
-          <include name="getScreenshot"/>
-          <include name="finish"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- testcases.SigninPage -->
-    </classes>
-  </test> <!-- Sign-in(failed) -->
-  <test thread-count="5" name="Project-Validation(failed)">
-    <classes>
-      <class name="testcases.ProjectNameValidate">
+      <class name="testcases.MMT_Automation">
         <methods>
           <include name="initialize"/>
-          <include name="finish"/>
-          <include name="getScreenshot"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- testcases.ProjectNameValidate -->
+      </class> <!-- testcases.MMT_Automation -->
     </classes>
-  </test> <!-- Project-Validation(failed) -->
-  <test thread-count="5" name="Dashboard-Validation(failed)">
-    <classes>
-      <class name="testcases.DashboardValidate">
-        <methods>
-          <include name="finish"/>
-          <include name="validate"/>
-          <include name="initialize"/>
-          <include name="getScreenshot"/>
-        </methods>
-      </class> <!-- testcases.DashboardValidate -->
-    </classes>
-  </test> <!-- Dashboard-Validation(failed) -->
+  </test> <!-- MMT-FLight-Booking(failed) -->
 </suite> <!-- Failed suite [Suite] -->

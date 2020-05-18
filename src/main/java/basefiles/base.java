@@ -19,6 +19,7 @@ public class base {
 
 	protected WebDriver driver;
 	protected Properties prop;
+	private String s;
 
 	public WebDriver initializeDriver() throws IOException {
 		prop = new Properties();

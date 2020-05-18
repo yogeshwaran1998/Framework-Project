@@ -1,17 +1,22 @@
 package basefiles;
 
-import java.io.IOException;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 public class Listeners implements ITestListener{
 	
-	base obj = new base();
+	ExtentTest test;
+	
+	ExtentReports extent=ExtentReporterNG.ExtentReportsNG();
 
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
+		
+		test= extent.createTest(result.getMethod().getMethodName());
 		
 	}
 
@@ -23,12 +28,9 @@ public class Listeners implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		
-		try {
-			obj.getScreenshot(result.getName());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		test.fail(result.getThrowable());
+		
+
 	}
 
 	public void onTestSkipped(ITestResult result) {
@@ -43,6 +45,8 @@ public class Listeners implements ITestListener{
 
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
+		
+		extent.flush();
 		
 	}
 

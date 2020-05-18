@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="basefiles.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="MMT-FLight-Booking(failed)">
     <classes>
-      <class name="testcases.Linarc_TaskCreate_QA2">
+      <class name="testcases.MMT_Automation">
         <methods>
-          <include name="createTasks"/>
           <include name="initialize"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- testcases.Linarc_TaskCreate_QA2 -->
+      </class> <!-- testcases.MMT_Automation -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- MMT-FLight-Booking(failed) -->
+</suite> <!-- Failed suite [Suite] -->

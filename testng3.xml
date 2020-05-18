@@ -5,7 +5,6 @@
 <listeners>
 
 <listener class-name="basefiles.Listeners"></listener>
-<listener class-name="basefiles.ExtentReporterNG"></listener>
 </listeners>
   <test name="Company Creation">
     <classes>

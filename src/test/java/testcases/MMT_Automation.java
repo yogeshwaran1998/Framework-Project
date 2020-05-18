@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -15,24 +16,36 @@ import pageObjects.MMT_Booking;
 import pageObjects.MMT_Home;
 
 public class MMT_Automation extends base {
+	
 
-	public static Logger Log= LogManager.getLogger(base.class.getName());
+	public static Logger Log = LogManager.getLogger(base.class.getName());
+
 	@BeforeTest
 	public void initialize() throws IOException {
 
-        driver=initializeDriver();
-        
-        driver.get(prop.getProperty("mmturl"));
-		
+		driver = initializeDriver();
+
+		driver.get(prop.getProperty("mmturl"));
+
 	}
-        @Test
-        public void bookflight() throws InterruptedException
-        {
-        MMT_Home mh= new MMT_Home(driver);
-        MMT_Booking mb= new MMT_Booking(driver);
+
+	@Test(priority = 1)
+	public void bookflight() throws InterruptedException {
+		
+		
+		try {
+		
+		}
+		
+		catch(Exception e){
+			
+		}
+
+		MMT_Home mh = new MMT_Home(driver);
+		MMT_Booking mb = new MMT_Booking(driver);
 		mh.getfrom().click();
 		sleep();
-		Actions ac= new Actions(driver);
+		Actions ac = new Actions(driver);
 		ac.moveToElement(mh.getfromCity()).click().pause(3000).sendKeys("goa").build().perform();
 		sleep();
 		mh.getdesiredFromCity().click();
@@ -55,31 +68,44 @@ public class MMT_Automation extends base {
 		sleep();
 		mh.getsearchButton().click();
 		Thread.sleep(7000);
-		
+
 		mb.getstops().click();
 		sleep();
 		mb.getsort().click();
 		sleep();
 		mb.getsortPrice().click();
 		Thread.sleep(4000);
-		
+
 		WebElement element = mb.getdepartureFlight();
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", element);
-		
+
 		sleep();
 		mb.getreturnFlight().click();
 		sleep();
 		mb.getbookButton().click();
 		sleep();
 		mb.getcontinueButton().click();
-		//mb.getfinalContinue().click();
-		
+		// mb.getfinalContinue().click();
+
 	}
-        
-    	public void sleep() throws InterruptedException
-		{
-			Thread.sleep(3000);
-		}
-        
+
+	public void sleep() throws InterruptedException {
+		Thread.sleep(3000);
+	}
+
+	@Test(priority = 2)
+	public void afterTest() {
+
+		Assert.assertTrue(false);
+
+	}
+
+	@Test(priority = 3)
+	public void finalTest() {
+
+		Assert.assertTrue(true);
+
+	}
+
 }

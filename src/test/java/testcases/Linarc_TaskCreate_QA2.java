@@ -11,20 +11,35 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import basefiles.base;
 import pageObjects.Linarc_TasksCreate_Objects;
 
 public class Linarc_TaskCreate_QA2 extends base {
+	
+	ExtentReports extent;
 
 	@BeforeTest
 	public void initialize() throws IOException {
 
 		driver = initializeDriver();
 		driver.get(prop.getProperty("linarcLive"));
+		String path=System.getProperty("user.dir")+"\\reports\\index.html";
+		ExtentSparkReporter reporter= new ExtentSparkReporter(path);
+		reporter.config().setReportName("Linarc Tasks Creation");
+		reporter.config().setDocumentTitle("Test Results");
+		
+		extent= new ExtentReports();
+		extent.attachReporter(reporter);
+		extent.setSystemInfo("Tester", "Yogesh");
 	}
 
 	@Test
 	public void createTasks() throws InterruptedException {
+		
+		extent.createTest("Tasks Creation");
 
 		Linarc_TasksCreate_Objects obj = new Linarc_TasksCreate_Objects(driver);
 
@@ -138,8 +153,6 @@ public class Linarc_TaskCreate_QA2 extends base {
 
 				driver.findElement(By.xpath(todayDate)).click();
 				Thread.sleep(2000);
-//				ac.moveToElement(driver.findElement(By.xpath("//span[contains(text(),'Daliy Job Report')]"))).build()
-//						.perform();
 				Thread.sleep(1000);
 				ac.moveToElement(driver.findElement(By.xpath("//div[@class='c-arrow-layout'][2]"))).click().pause(1000).click().build().perform();
 				Thread.sleep(2000);
@@ -171,6 +184,8 @@ public class Linarc_TaskCreate_QA2 extends base {
 			}
 
 			driver.findElement(By.xpath("//button[@class='btn-default']")).click();
+			
+			extent.flush();
 
 		}
 
