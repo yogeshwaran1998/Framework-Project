@@ -50,6 +50,7 @@ public class MMT_Automation extends base {
 		sleep();
 		mh.getdesiredFromCity().click();
 		ac.moveToElement(mh.gettoCity()).click().pause(3000).sendKeys("maa").build().perform();
+		sleep();
 		mh.getdesiredToCity().click();
 		sleep();
 		mh.getnextMonth().click();
