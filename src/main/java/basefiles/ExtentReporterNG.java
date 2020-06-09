@@ -12,7 +12,7 @@ public class ExtentReporterNG {
 		//ExtentTest test=extent.createTest("Flight Booking Results");
 		String path = System.getProperty("user.dir") + "\\reports\\index.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
-		reporter.config().setReportName("Linarc Tasks Creation");
+		reporter.config().setReportName("Flight Booking");
 		reporter.config().setDocumentTitle("Test Results");
 
 		extent = new ExtentReports();

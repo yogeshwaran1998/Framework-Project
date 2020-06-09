@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="101560" started-at="2020-06-09T17:00:50 IST" finished-at="2020-06-09T17:02:31 IST">
+  <suite name="Default suite" duration-ms="100750" started-at="2020-06-09T21:18:44 IST" finished-at="2020-06-09T21:20:24 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="101560" started-at="2020-06-09T17:00:50 IST" finished-at="2020-06-09T17:02:31 IST">
+    <test name="Default test" duration-ms="100750" started-at="2020-06-09T21:18:44 IST" finished-at="2020-06-09T21:20:24 IST">
       <class name="testcases.MMT_Automation">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.MMT_Automation@6236eb5f]" name="initialize" is-config="true" duration-ms="7983" started-at="2020-06-09T17:00:50 IST" finished-at="2020-06-09T17:00:58 IST">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:testcases.MMT_Automation@6236eb5f]" name="initialize" is-config="true" duration-ms="6430" started-at="2020-06-09T21:18:44 IST" finished-at="2020-06-09T21:18:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="bookflight()[pri:1, instance:testcases.MMT_Automation@6236eb5f]" name="bookflight" duration-ms="93530" started-at="2020-06-09T17:00:58 IST" finished-at="2020-06-09T17:02:31 IST">
+        <test-method status="PASS" signature="bookflight()[pri:1, instance:testcases.MMT_Automation@6236eb5f]" name="bookflight" duration-ms="94273" started-at="2020-06-09T21:18:50 IST" finished-at="2020-06-09T21:20:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookflight -->
-        <test-method status="PASS" signature="afterTest()[pri:2, instance:testcases.MMT_Automation@6236eb5f]" name="afterTest" duration-ms="20" started-at="2020-06-09T17:02:31 IST" finished-at="2020-06-09T17:02:31 IST">
+        <test-method status="PASS" signature="afterTest()[pri:2, instance:testcases.MMT_Automation@6236eb5f]" name="afterTest" duration-ms="4" started-at="2020-06-09T21:20:24 IST" finished-at="2020-06-09T21:20:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="finalTest()[pri:3, instance:testcases.MMT_Automation@6236eb5f]" name="finalTest" duration-ms="1" started-at="2020-06-09T17:02:31 IST" finished-at="2020-06-09T17:02:31 IST">
+        <test-method status="PASS" signature="finalTest()[pri:3, instance:testcases.MMT_Automation@6236eb5f]" name="finalTest" duration-ms="0" started-at="2020-06-09T21:20:24 IST" finished-at="2020-06-09T21:20:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalTest -->
