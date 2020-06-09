@@ -23,12 +23,12 @@ public class MMT_Home {
 	By desiredToCity= By.xpath("//p[contains(text(),'Chennai, India')]");		
 	
 	By nextMonth = By.xpath("//span[@aria-label='Next Month']");
-	By departureDate= By.xpath("//div[@aria-label='Sat Jun 06 2020']");
+	By departureDate= By.xpath("//div[@aria-label='Sat Jul 04 2020']");
 	By onreturn = By.cssSelector("p[data-cy='returnDefaultText']");
-	By returnDate= By.xpath("//div[@aria-label='Tue Jun 16 2020']");
+	By returnDate= By.xpath("//div[@aria-label='Tue Aug 04 2020']");
 	
 	By flightType= By.xpath("//p[contains(text(),'Economy')]");
-	By adultsCount= By.cssSelector("li[data-cy='adults-3']");
+	By adultsCount= By.cssSelector("li[data-cy='adults-1']");
 	
 	By applyButton= By.cssSelector("button[data-cy='travellerApplyBtn']");
 	By searchButton= By.xpath("//a[contains(text(),'Search')]");

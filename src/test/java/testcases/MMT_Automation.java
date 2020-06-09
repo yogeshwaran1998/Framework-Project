@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import basefiles.base;
 import pageObjects.MMT_Booking;
+import pageObjects.MMT_Final;
 import pageObjects.MMT_Home;
 
 public class MMT_Automation extends base {
@@ -43,13 +44,14 @@ public class MMT_Automation extends base {
 
 		MMT_Home mh = new MMT_Home(driver);
 		MMT_Booking mb = new MMT_Booking(driver);
+		MMT_Final md = new MMT_Final(driver);
 		mh.getfrom().click();
 		sleep();
 		Actions ac = new Actions(driver);
-		ac.moveToElement(mh.getfromCity()).click().pause(3000).sendKeys("goa").build().perform();
+		ac.moveToElement(mh.getfromCity()).click().pause(2000).sendKeys("goa").pause(2000).build().perform();
 		sleep();
 		mh.getdesiredFromCity().click();
-		ac.moveToElement(mh.gettoCity()).click().pause(3000).sendKeys("maa").build().perform();
+		ac.moveToElement(mh.gettoCity()).click().pause(2000).sendKeys("maa").pause(2000).build().perform();
 		sleep();
 		mh.getdesiredToCity().click();
 		sleep();
@@ -86,8 +88,42 @@ public class MMT_Automation extends base {
 		sleep();
 		mb.getbookButton().click();
 		sleep();
+	
+		String winHandleBefore = driver.getWindowHandle();
+
+		// Perform the click operation that opens new window
+		
 		mb.getcontinueButton().click();
-		// mb.getfinalContinue().click();
+
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+		    driver.switchTo().window(winHandle);
+		}
+
+		// Perform the actions on new window
+		Thread.sleep(5000);
+		System.out.println(driver.getTitle());
+		
+		mb.getfinalContinue().click();
+		
+		Thread.sleep(6000);
+		
+		md.getaddAdults().click();
+		
+		md.getfirstName().sendKeys("Yogesh");
+		md.getlastName().sendKeys("Waran");
+		md.getgender().click();
+		
+		md.getmobileNumber().sendKeys("8124534654");
+		md.getemail().sendKeys("yogi@mailinator.com");
+		md.getlastContinue().click();
+		
+		Thread.sleep(8000);
+		
+		//md.getskipNext().click();
+		
+		ac.moveToElement(md.getskipNext()).doubleClick().build().perform();
+		md.getcontinueAnyway().click();
 
 	}
 
