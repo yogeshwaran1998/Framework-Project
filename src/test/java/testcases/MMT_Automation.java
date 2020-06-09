@@ -89,7 +89,8 @@ public class MMT_Automation extends base {
 		mb.getbookButton().click();
 		sleep();
 	
-		String winHandleBefore = driver.getWindowHandle();
+		//String winHandleBefore = driver.getWindowHandle();
+		driver.getWindowHandle();
 
 		// Perform the click operation that opens new window
 		
