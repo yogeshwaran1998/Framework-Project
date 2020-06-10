@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -104,6 +105,15 @@ public class MMT_Automation extends base {
 		// Perform the actions on new window
 		Thread.sleep(5000);
 		System.out.println(driver.getTitle());
+		
+		Boolean isPresent = driver.findElements(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[1]/div[1]/div[3]/div/div[3]/label[2]/span[2]")).size()>0;
+		System.out.println(isPresent);
+		
+		if(isPresent)
+		{
+			driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[1]/div[1]/div[3]/div/div[3]/label[2]/span[2]")).click();
+			Thread.sleep(4000);
+		}
 		
 		mb.getfinalContinue().click();
 		
